@@ -11,7 +11,33 @@
     <a href="#super-promos" class="w3-button w3-bar-item">Super Promos</a>
     <a href="#store" class="w3-button w3-bar-item">Store</a>
     <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-  </nav>
+</nav>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <p>
+      <label>Nome: <input type="text" name="name" /></label>   
+    </p>
+    <p>
+      <label>e-mail: <input type="email" name="email" /></label>
+    </p>
+    <p>
+      <!-- <label>Deseja receber mensagens sobre outras promoções e ofertas?: <select name="role[]" multiple>
+        <option value="yes">Sim! Adoro economizar!</option>
+        <option value="no">Só a Black Friday por enquanto.</option>
+      </select></label> -->
+
+      <label>Deseja receber mensagens sobre outras promoções e ofertas?</label><br>
+      <input type="radio" id="chkNewsletter" name="y/n" value="yes" checked>
+      <label for="yes">Sim! Quero economizar sempre!</label><br>
+
+      <input type="radio" id="chkNewsletter" name="y/n" value="no">
+      <label for="no">Só sobre a Black Friday por enquanto.</label><br>
+
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
     
 
 
