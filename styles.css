@@ -64,7 +64,7 @@ ul {
     justify-content: center;
     align-items: center;
     min-height: 350px;
-    background: var(--main-purple-color); /* url("./old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg") no-repeat center / cover; */
+    background: var(--main-white-color) url("./old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg") no-repeat center / cover;
     background-blend-mode: luminosity;
     color: var(--main-white-color);
 }
