@@ -2,18 +2,11 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<body>
+<link rel="stylesheet" href="styles.css">
 
-<!-- Navigation -->
-<nav class="w3-bar w3-black">
-    <a href="#home" class="w3-button w3-bar-item">Home</a>
-    <a href="#super-promos" class="w3-button w3-bar-item">Super Promos</a>
-    <a href="#store" class="w3-button w3-bar-item">Store</a>
-    <a href="#contact" class="w3-button w3-bar-item">Contact</a>
-</nav>
 
-  <form name="contact" method="POST" data-netlify="true">
+
+  <!-- <form name="contact" method="POST" data-netlify="true">
     <p>
       <label>Nome: <input type="text" name="name" /></label>   
     </p>
@@ -21,11 +14,6 @@
       <label>e-mail: <input type="email" name="email" /></label>
     </p>
     <p>
-      <!-- <label>Deseja receber mensagens sobre outras promoções e ofertas?: <select name="role[]" multiple>
-        <option value="yes">Sim! Adoro economizar!</option>
-        <option value="no">Só a Black Friday por enquanto.</option>
-      </select></label> -->
-
       <label>Deseja receber mensagens sobre outras promoções e ofertas?</label><br>
       <input type="radio" id="chkNewsletter" name="y/n" value="yes" checked>
       <label for="yes">Sim! Quero economizar sempre!</label><br>
@@ -37,9 +25,84 @@
     <p>
       <button type="submit">Send</button>
     </p>
-  </form>
+  </form> -->
     
 
+<div class="wrapper"> 
+  <body>
+    <header class="page-header">
+      <nav>
+        <h2 class="logo">
+          LOGO
+        </h2>
+        <!-- <ul>
+          <li>Li_1</li>
+          <li>li_2</li>
+        </ul> -->
+        <button class="cta-contact">
+          get in touch
+        </button>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <!-- content here -->
+      <div>
+        <p>Falta pouco para a próxima Black Friday!</p>
+        <p id="blkfrd-timer"></p>
+        <script>
+          var deadline = new Date("Nov 26, 2021").getTime();
+          var x = setInterval(function() {
+            var now = new Date().getTime();
+            var t = deadline - now;
+            var days = Math.floor(t / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+            var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((t % (1000 * 60)) / 1000);
+            document.getElementById("blkfrd-timer").innerHTML = days + "d " 
+            + hours + "h " + minutes + "m " + seconds + "s ";
+                if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("blkfrd-timer").innerHTML = "Corre antes que acabe!";
+                }
+          }, 1000);
+        </script>
+      </div>
+      
+      <div>
+        <form name="promo-signup" method="POST" data-netlify="true">
+          <p>
+            <label><input type="text" name="name" placeholder="Nome"/></label>   
+          </p>
+          <p>
+            <label><input type="email" name="email" placeholder="E-mail"/></label>
+          </p>
+          <p>
+            <label>Deseja receber mensagens sobre outras promoções e ofertas?</label><br>
+            <input type="radio" id="chkNewsletter" name="y/n" value="yes" checked>
+            <label for="yes">Sim! Quero economizar sempre!</label><br>
+      
+            <input type="radio" id="chkNewsletter" name="y/n" value="no">
+            <label for="no">Só sobre a Black Friday por enquanto.</label><br>
+      
+          </p>
+          <p>
+            <button type="submit">Enviar</button>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    
+
+    <footer class="page-footer">
+      <small>
+        <!-- content here -->
+      </small>
+      <ul>
+        <!-- list items here -->
+      </ul>
+    </footer>
 
 
 
@@ -56,6 +119,6 @@
 
 
 
-
-</body>
+  </body>
+</div>
 </html>

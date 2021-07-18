@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+   
+.wrapper > * {
+    padding: 20px;
+}
+   
+.page-main {
+    flex-grow: 1;
+}
+
+.page-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 99, 71, 0.514);
+}
+
+ul {
+    list-style: none;
+}
+
+.page-header ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  align-items: stretch;
+  background: rgba(255, 0, 0, 0.534);
+}
+ 
+@media screen and (min-width: 550px) {
+  .page-header ul {
+    width: auto;
+    margin-top: 0;
+  }
+ 
+  .page-header .cta-contact {
+    order: 1;
+  }
+}  
+
+/* variables */
+:root {
+    --main-white-color: white;
+    --main-purple-color: #9e89b8;
+}
+   
+.page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    background: var(--main-purple-color); /* url("./old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg") no-repeat center / cover; */
+    background-blend-mode: luminosity;
+    color: var(--main-white-color);
+}
+   
+.page-main div {
+    display: flex;
+    min-width: 500px;
+    min-height: auto;
+    padding: 5%;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.page-main div p {
+    padding: 1%;
+    min-width: auto;
+
+}
+
+.page-main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .page-main {
+        padding-left: 90px;
+    }
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column-reverse;
+    background: #9e89b87c;
+}
+
+.page-footer ul {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    background: #9e89b8bb;
+}
+
+@media screen and (min-width: 550px) {
+    .page-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-footer ul {
+        margin-bottom: 0;
+    }
+
+    .page-header ul {
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+
